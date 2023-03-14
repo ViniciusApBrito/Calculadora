@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<br lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>calculadora</title>
+
+</head>
+<body>
+
+
+
+    <h1>Calculadora</h1>
+    <input class = "B" id="num1" type="text"></input>
+    <input class = "B" id="num2" type="text"></input>
+  
+
+    <br> </br>
+    <button class = "A" type="button" onclick="operacao('+')"> Adição</button>
+    <button class = "A" type="button" onclick="operacao('-')"> Subtração</button>
+    <button class = "A" type="button" onclick="operacao('/')"> Divisão</button>
+    <button class = "A" type="button" onclick="operacao('*')"> Multiplicação</button>
+    <br></br>
+    <input class = "C" id="resultado" type="text" disabled></input>
+    </form>
+
+
+<script>
+    function operacao(op) {
+        var num1, num2, resultado;
+        num1 = parseFloat(document.getElementById("num1").value);
+        num2 = parseFloat(document.getElementById("num2").value);
+    
+        switch (op) {
+            case '+':
+                resultado = num1 + num2;
+                break;
+            case '-':
+                resultado = num1 - num2;
+                break;
+            case '*':
+                resultado = num1 * num2;
+                break;
+            case '/':
+                resultado = num1 / num2;
+                break;
+        }
+
+        document.getElementById("resultado").value = resultado;
+    }
+</script>
+</body>
+
+</html>
